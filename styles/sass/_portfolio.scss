@@ -1,0 +1,169 @@
+.portfolio {
+  background: $portfolioBackground;
+  padding-bottom: 100px;
+  padding-top: 80px;
+  h3,
+  h4,
+  p {
+    color: white;
+  }
+  @media (max-width: 416px) {
+    padding-bottom: 10px;
+    padding-top: 40px;
+  }
+}
+
+.containerWork {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 3.5rem;
+  @include for-mobile {
+    flex-direction: column;
+    padding-bottom: 4.5rem;
+  }
+  .containerImage {
+    width: 50%;
+    padding-top: 30px;
+    @include for-mobile {
+      width: 100%;
+      padding-top: 20px;
+    }
+  }
+  .containerText {
+    width: 45%;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    @include for-mobile {
+      width: 100%;
+      padding-top: 20px;
+    }
+    p {
+      margin: 1rem 0;
+      line-height: 1.55;
+    }
+    .containerIconsMini {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 3rem;
+      li {
+        padding: 0 7px;
+        font-size: 1.6rem;
+        color: wheat;
+        @include for-small-laptops {
+          padding: 4px 7px;
+        }
+        @include for-mobile {
+          padding: 0 5.2px;
+        }
+        @media (max-width: 416px) {
+          margin: 8px 0;
+        }
+      }
+    }
+  }
+}
+
+.containerWorkButtons {
+  margin-bottom: 1.5rem;
+  @include for-mobile {
+    text-align: center;
+  }
+}
+
+.containerWork:nth-child(2n + 1) {
+  .containerText {
+    order: -1;
+    text-align: left;
+    @include for-mobile {
+      order: 1;
+    }
+  }
+}
+
+.angle3:after {
+  background-color: $portfolioBackground;
+  content: "";
+  // z-index: 90;
+  -webkit-clip-path: polygon(
+    50% 0%,
+    80% 0,
+    100% 0,
+    100% 44%,
+    77% 28%,
+    55% 43%,
+    20% 23%,
+    0 53%,
+    0 0,
+    20% 0
+  );
+  clip-path: polygon(
+    50% 0%,
+    80% 0,
+    100% 0,
+    100% 44%,
+    77% 28%,
+    55% 43%,
+    20% 23%,
+    0 53%,
+    0 0,
+    20% 0
+  );
+  width: 100%;
+  height: 260px;
+}
+.parallax {
+  height: 70vh;
+  background: url(./../Assets/keyboardBackground.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  @include for-tablet {
+    background: url(./../Assets/keyboardBackgroundNew.jpg);
+    height: 50vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-attachment: scroll;
+  }
+}
+
+.angle5 {
+  background-color: transparent;
+  position: absolute;
+  width: 100%;
+  &:after {
+    background-color: $grey;
+    content: "";
+    // z-index: 90;
+    -webkit-clip-path: polygon(
+      56% 16%,
+      79% 0,
+      100% 18%,
+      100% 40%,
+      79% 40%,
+      53% 40%,
+      28% 40%,
+      0 40%,
+      0 25%,
+      24% 0
+    );
+    clip-path: polygon(
+      56% 16%,
+      79% 0,
+      100% 18%,
+      100% 40%,
+      79% 40%,
+      53% 40%,
+      28% 40%,
+      0 40%,
+      0 25%,
+      24% 0
+    );
+    width: 100%;
+    height: 260px;
+    bottom: -196px;
+  }
+}

@@ -1,0 +1,43 @@
+$yellow: rgba(255, 222, 89, 1);
+$darkYellow: #76734e;
+$blue: #243b55;
+$portfolio: #141e30;
+$formBackground: lighten($yellow, 12%);
+$portfolioBackground: lighten($portfolio, 8%);
+$darkenBlue: darken($blue, 8%);
+$socialIconColor: darken($blue, 25%);
+$grey: rgb(223, 224, 224);
+$greyGradient: #dfe0e0;
+$yellowGradient: #f7f2df;
+
+.skipLink {
+  position: absolute;
+  left: -1000px;
+  top: 5px;
+  z-index: 999;
+  color: black;
+  &:focus {
+    left: 10px;
+  }
+}
+
+@mixin for-laptops {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+@mixin for-small-laptops {
+  @media (max-width: 1000px) {
+    @content;
+  }
+}
+@mixin for-tablet {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+@mixin for-mobile {
+  @media (max-width: 500px) {
+    @content;
+  }
+}

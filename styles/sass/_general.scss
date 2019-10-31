@@ -1,0 +1,187 @@
+body {
+  background: #252525;
+  overflow-x: hidden;
+  margin: 0 auto;
+}
+
+html {
+  font-size: 62.5%;
+  line-height: 1.15;
+}
+
+.wrapper {
+  max-width: 1280px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 8%;
+  @media (max-width: 1000px) {
+    width: 100%;
+  }
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  width: 100%;
+  border: 0;
+}
+
+a,
+button {
+  outline-style: none;
+  box-shadow: none;
+  border-color: transparent;
+  text-decoration: none;
+  // color: #fff;
+  font-size: 2rem;
+  font-family: "Raleway", sans-serif;
+  @media (max-width: 414px) {
+    font-size: 1.8rem;
+  }
+}
+
+input {
+  outline-style: none;
+  box-shadow: none;
+  border-color: transparent;
+}
+
+h1,
+h3,
+h4,
+p,
+li,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+h1 {
+  font-family: "Raleway", sans-serif;
+  font-size: 11rem;
+  color: $yellowGradient;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: normal;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  background: transparent;
+  line-height: 1;
+  @include for-laptops {
+    font-size: calc(4.5rem + (120 - 45) * (100vw - 320px) / (1280 - 320));
+    left: 48%;
+  }
+  @media (max-width: 983px) {
+    font-size: 8rem;
+  }
+  @media (max-width: 906px) {
+    font-size: 7.6rem;
+  }
+  @include for-tablet {
+    font-size: 6.6rem;
+  }
+  @media (max-width: 321px) {
+    font-size: 5.5rem;
+  }
+}
+
+h3 {
+  font-size: 6rem;
+  font-weight: 600;
+  color: black;
+  text-align: center;
+  letter-spacing: normal;
+  text-transform: uppercase;
+  padding: 100px 0 50px;
+  font-family: "Raleway", sans-serif;
+  @include for-tablet {
+    font-size: 5rem;
+  }
+  @media (max-width: 321px) {
+    font-size: 4rem;
+  }
+}
+
+h4 {
+  font-size: 4.2rem;
+  color: black;
+  text-align: center;
+  letter-spacing: normal;
+  text-transform: capitalize;
+  padding-bottom: 6px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  @include for-laptops {
+    font-size: 3.7rem;
+  }
+  @include for-small-laptops {
+    font-size: 3.5rem;
+  }
+}
+
+p {
+  font-size: 1.7rem;
+  color: black;
+  line-height: 1.8;
+  letter-spacing: normal;
+  font-family: "Raleway", sans-serif;
+}
+
+li,
+input,
+textarea {
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  font-family: "Raleway", sans-serif;
+  border: transparent;
+  background: $formBackground;
+}
+
+li {
+  background: transparent;
+  line-height: 28px;
+}
+
+section {
+  margin: 0;
+  padding: 50px 0;
+  @media (max-width: 416px) {
+    padding: 25px 0;
+  }
+}
+
+.buttons {
+  background: $yellow;
+  color: $portfolio;
+  margin: 2px 3px;
+  padding: 10px 15px;
+  transform: scale(1);
+  &:hover,
+  &:focus {
+    color: $yellow;
+    background: $portfolio;
+  }
+  &:active {
+    border: 2px solid $yellow;
+    transform: scale(1.1);
+    transition: all 0.3sec ease-in;
+  }
+  @media (max-width: 737px) {
+    padding: 4px 8px;
+  }
+  @media (max-width: 416px) {
+    padding: 4px 8px;
+  }
+}
+
+.angle {
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+  }
+}

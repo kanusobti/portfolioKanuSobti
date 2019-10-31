@@ -1,0 +1,211 @@
+header {
+  position: relative;
+  background: linear-gradient(270deg, #263547, #141e30, #243b55);
+  background-size: 600% 600%;
+  -webkit-animation: AnimationName 30s ease infinite;
+  -moz-animation: AnimationName 30s ease infinite;
+  animation: AnimationName 30s ease infinite;
+  padding: 100px 0 50px;
+  z-index: 50;
+  height: calc(100vh - 160px);
+  width: 100%;
+  @-webkit-keyframes AnimationName {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  @-moz-keyframes AnimationName {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  @keyframes AnimationName {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}
+
+header:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -1px;
+  left: -8px;
+  height: 100vh;
+  width: 100%;
+  border: 4px solid $yellow;
+  background-color: $yellow;
+  -webkit-clip-path: polygon(0% 0, 100% 0, 100% 100%, 80% 0%);
+  clip-path: polygon(0% 0, 100% 0, 100% 100%, 70% 0%);
+}
+
+.angle1 {
+  background: linear-gradient(270deg, $greyGradient, $yellowGradient);
+  background-size: 600% 600%;
+  height: 160px;
+  width: 100%;
+  &:after {
+    background: linear-gradient(270deg, #263547, #141e30, #243b55);
+    background-size: 600% 600%;
+    -webkit-animation: AnimationName 30s ease infinite;
+    -moz-animation: AnimationName 30s ease infinite;
+    animation: AnimationName 30s ease infinite;
+    -webkit-clip-path: polygon(100% 100%, 100% 0, 0 0);
+    clip-path: polygon(100% 100%, 100% 0, 0 0);
+    height: 160px;
+    width: 100%;
+  }
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.title {
+  font-size: 3.2rem;
+  color: $yellow;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: absolute;
+  top: 62%;
+  left: 40%;
+  @include for-laptops {
+    left: 34%;
+    top: 58%;
+  }
+  @include for-small-laptops {
+    left: 30%;
+  }
+
+  @include for-tablet {
+    left: 27%;
+    font-size: 3rem;
+  }
+  @media (max-width: 760px) {
+    font-size: 2.5rem;
+  }
+  @media (max-width: 738px) {
+    margin-top: 10px;
+  }
+  @media (max-width: 675px) {
+    top: 62%;
+  }
+  @include for-mobile {
+    font-size: 2.2rem;
+    // top: 55%;
+    margin-top: 10px;
+  }
+  @media (max-width: 430px) {
+    font-size: 1.9rem;
+  }
+  @media (max-width: 353px) {
+    left: 17%;
+  }
+  @media (max-width: 321px) {
+    font-size: 1.8rem;
+  }
+}
+
+.hamburger {
+  z-index: 100;
+  position: fixed;
+  top: 19px;
+  right: 30px;
+  border-radius: 50%;
+  background: $yellow;
+  padding: 10px;
+  transform: scale(1);
+  &:hover {
+    transform: scale(1.2);
+  }
+  @include for-mobile {
+    padding: 4px;
+  }
+
+  span {
+    display: block;
+    background: $blue;
+    width: 35px;
+    height: 5px;
+    margin: 5px;
+    @include for-mobile {
+      width: 29px;
+    }
+  }
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100vh;
+  transition: all 0.5s ease-in;
+  .navList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 11rem;
+    @media (max-width: 738px) {
+      padding: 0;
+    }
+    @media (max-width: 416px) {
+      margin: 12rem;
+    }
+
+    .navLink {
+      text-align: center;
+      width: 100%;
+      color: $yellow;
+      margin: 5px;
+      text-transform: uppercase;
+      &:hover {
+        border-bottom: 2px solid $yellowGradient;
+        transition: all 0.3s ease-in;
+      }
+    }
+  }
+}
+
+.show {
+  right: 0px;
+}
+
+.navList {
+  .navItem {
+    padding: 30px;
+    @media (max-width: 416px) {
+      padding: 16px;
+    }
+  }
+}
+
+.headerdiv {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
